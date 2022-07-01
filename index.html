@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="greet.js"></script>
+    <script src="enough-airtime.js"></script>
+    <script src="greet-widget.js" defer></script>
+    <script src="enough-airtime-widget.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    
+    <script>
+        //console.log(greet("Chibuzor"));
+        //console.log(greet("Emma"));
+        //console.log(greet("John"));
+    </script>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: orange;
+        }
+        .message {
+            padding: 1em;
+            background-color: aqua;
+            margin-bottom: 1em;
+        }
+        .input > label {
+            display: inline-block;
+            width: 15em;
+            padding: 0.5em;
+            font-weight: bold;
+        }
+        .input > input[type="text"] {
+            margin: 0.5em;
+            padding: 0.5em;
+        }
+        .widgets {
+            display: flex;
+        }
+        .widget {
+            flex: 1;
+            border: 1px solid;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>MY BOOTCAMP AlpineJS WIDGETS</h1>
+    <div class="widgets">
+        <div class="widget" x-data="greetWidget">
+            <h2>Greet Widget</h2>
+            <div x-show="message.length > 0" class="message" x-text="message">
+                You will be greeted here...
+            </div>
+            
+            <label for="name">Please enter your name:</label>
+            <input type="text" x-model="name" id="name">
+            
+            <button x-on:click="greetMe">Greet!</button>
+        </div>
+
+
+        <div class="widget" x-data="enoughAirtimeWidget">
+            <h2>ENOUGH AIRTIME</h2>
+    
+            <div class="input">
+                <label for="usage">Please enter your airtime usage: </label>
+                <input type="text" x-model="airtimeUsage" id="usage">
+            </div>
+            <div class="input">
+                <label for="amount">Amount Available: </label>
+                <input type="text" x-model="availableAmount" id="amount">
+            </div>
+    
+            <div class="message" x-text="airtimeMessage">
+            </div>
+            <div>
+                <button x-on x-on:click="calculate" >Calculate airtime usage</button>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
