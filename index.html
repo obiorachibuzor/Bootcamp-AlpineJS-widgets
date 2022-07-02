@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="greet.js"></script>
     <script src="enough-airtime.js"></script>
+    <script src="transport-fee.js"></script>
+    <script src="years-ago.js"></script>
     <script src="greet-widget.js" defer></script>
     <script src="enough-airtime-widget.js" defer></script>
+    <script src="transport-fee-widget.js" defer></script>
+    <script src="years-ago-widget.js" defer></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     
     <script>
@@ -36,22 +41,15 @@
             margin: 0.5em;
             padding: 0.5em;
         }
-        .widgets {
-            display: flex;
-        }
-        .widget {
-            flex: 1;
-            border: 1px solid;
-            margin: 1em;
-            padding: 1em;
-            border-radius: 0.5em;
-        }
+  
+       
+        
     </style>
 </head>
 <body>
     <h1>MY BOOTCAMP AlpineJS WIDGETS</h1>
     <div class="widgets">
-        <div class="widget" x-data="greetWidget">
+        <div class="widget1" x-data="greetWidget">
             <h2>Greet Widget</h2>
             <div x-show="message.length > 0" class="message" x-text="message">
                 You will be greeted here...
@@ -64,7 +62,7 @@
         </div>
 
 
-        <div class="widget" x-data="enoughAirtimeWidget">
+        <div class="widget2" x-data="enoughAirtimeWidget">
             <h2>ENOUGH AIRTIME</h2>
     
             <div class="input">
@@ -81,6 +79,37 @@
             <div>
                 <button x-on x-on:click="calculate" >Calculate airtime usage</button>
             </div>
+        </div>
+    
+        <div class="widget3" x-data="transportFeeWidget">
+            <h2>Transport Fee</h2>
+            <div class="input">
+                <label for="">Please enter your work shift here (eg. morning, afternoon, nightshift): </label>
+                <input type="text" x-model="shift" id="shift">
+            </div>
+            
+            <div class="message" x-text="message">Your shift cost will show here...
+            </div>
+            
+            <div>
+                <button x-on x-on:click="transport" >Show the transport fee for your shift</button>
+            </div>
+        
+        </div>
+    
+        <div class="widget4" x-data="yearsAgoWidget"></p>
+            <h2>YEARS AGO</h2>
+            <div class="input">
+                <label for="">Please enter the year you wish here: </label>
+                <input type="number" x-model="newDate" id="newDate">
+            </div>
+    
+            <div class="message" x-text="message">The number of years will appear here...
+            </div>
+            <div>
+                <button x-on x-on:click="calculate" >Calculate the number of years - from the year you entered above to the current year</button>
+            </div>
+
         </div>
     </div>    
 </body>
