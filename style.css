@@ -1,0 +1,44 @@
+@media (min-width: 760px) {
+    .widgets {
+        background-color: orange;
+        display: flex;
+    }
+}
+
+
+.widget1 {
+    background-color: brown;
+    display: flexbox;
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.widget2 {
+    background-color: yellow;
+    display: flexbox;
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+ 
+.widget3 {
+    background-color:rgb(35, 109, 85);
+    display: flexbox;
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+
+}
+ 
+.widget4 {
+    background-color: green;
+    display: flexbox;
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
