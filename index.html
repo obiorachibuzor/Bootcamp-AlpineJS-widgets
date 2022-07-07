@@ -115,19 +115,17 @@
         </div>
 
         <div class="widget5" x-data="totalPhoneBillWidget">
-        <h2>Phone Bill</h2>
-        <div class="input">
-            <label for="bill">Please enter the items you wish here: </label>
-            <input type="text" x-model="items" id="bill" placeholder="items here">
-        </div>
-
-        <div class="bill-message" x-text="billMessage">Phone Bill will appear here...
-        </div>
-        <div>
-            <button x-on x-on:click="billDue" >Check the total phone bill</button>
-        </div>
-        
-
+            <h2>Phone Bill</h2>
+            <div class="input">
+                <label for="bill">Please enter the items you wish here: </label>
+                <input type="text" x-model="items" id="bill" placeholder="items here">
+            </div>
+            
+            <div class="bill-message" x-text="billMessage">Phone Bill will appear here...
+            </div>
+            <div>
+                <button x-on x-on:click="billDue" >Check the total phone bill</button>
+            </div>
         </div>
     </div>    
 </body>
