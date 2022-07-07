@@ -10,10 +10,12 @@
     <script src="enough-airtime.js"></script>
     <script src="transport-fee.js"></script>
     <script src="years-ago.js"></script>
+    <script src="total-phonebill.js"></script>
     <script src="greet-widget.js" defer></script>
     <script src="enough-airtime-widget.js" defer></script>
     <script src="transport-fee-widget.js" defer></script>
     <script src="years-ago-widget.js" defer></script>
+    <script src="total-phonebill-widget.js" defer></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     
     <script>
@@ -97,7 +99,7 @@
         
         </div>
     
-        <div class="widget4" x-data="yearsAgoWidget"></p>
+        <div class="widget4" x-data="yearsAgoWidget">
             <h2>YEARS AGO</h2>
             <div class="input">
                 <label for="">Please enter the year you wish here: </label>
@@ -109,6 +111,22 @@
             <div>
                 <button x-on x-on:click="calculate" >Calculate the number of years - from the year you entered above to the current year</button>
             </div>
+
+        </div>
+
+        <div class="widget5" x-data="totalPhoneBillWidget">
+        <h2>Phone Bill</h2>
+        <div class="input">
+            <label for="bill">Please enter the items you wish here: </label>
+            <input type="text" x-model="items" id="bill" placeholder="items here">
+        </div>
+
+        <div class="bill-message" x-text="billMessage">Phone Bill will appear here...
+        </div>
+        <div>
+            <button x-on x-on:click="billDue" >Check the total phone bill</button>
+        </div>
+        
 
         </div>
     </div>    
