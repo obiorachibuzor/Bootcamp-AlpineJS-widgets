@@ -3,12 +3,12 @@
         background-color: orange;
         display: flex;
     }
-}
 
+}
 
 .widget1 {
     background-color: brown;
-    display: flexbox;
+    flex: 1;
     border: 1px solid;
     margin: 1em;
     padding: 1em;
@@ -17,7 +17,7 @@
 
 .widget2 {
     background-color: yellow;
-    display: flexbox;
+    flex: 1;
     border: 1px solid;
     margin: 1em;
     padding: 1em;
@@ -26,7 +26,7 @@
  
 .widget3 {
     background-color:rgb(35, 109, 85);
-    display: flexbox;
+    flex: 1;
     border: 1px solid;
     margin: 1em;
     padding: 1em;
@@ -36,7 +36,7 @@
  
 .widget4 {
     background-color: green;
-    display: flexbox;
+    flex: 1;
     border: 1px solid;
     margin: 1em;
     padding: 1em;
@@ -44,9 +44,25 @@
 }
 .widget5 {
     background-color: blue;
-    display: flexbox;
+    flex: 1;
     border: 1px solid;
     margin: 1em;
     padding: 1em;
     border-radius: 0.5em;
+}
+
+.widget6 {
+    background-color:rosybrown;
+    flex: 1;
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
 }
