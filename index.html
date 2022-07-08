@@ -16,6 +16,8 @@
     <script src="transport-fee-widget.js" defer></script>
     <script src="years-ago-widget.js" defer></script>
     <script src="total-phonebill-widget.js" defer></script>
+    <script src="word-game.js"></script>
+    <script src="word-game-widget.js" defer></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     
     <script>
@@ -35,14 +37,15 @@
         }
         .input > label {
             display: inline-block;
-            width: 15em;
+            width: 25em;
             padding: 0.5em;
             font-weight: bold;
         }
         .input > input[type="text"] {
-            margin: 0.5em;
+            margin: 1em;
             padding: 0.5em;
         }
+       
   
        
         
@@ -57,19 +60,19 @@
                 You will be greeted here...
             </div>
             
-            <label for="name">Please enter your name:</label>
-            <input type="text" x-model="name" id="name">
+            <label for="name">Please enter your name here:</label>
+            <input type="text" x-model="name" id="name" placeholder="e.g John">
             
             <button x-on:click="greetMe">Greet!</button>
         </div>
 
 
         <div class="widget2" x-data="enoughAirtimeWidget">
-            <h2>ENOUGH AIRTIME</h2>
+            <h2>Enough Airtime</h2>
     
             <div class="input">
                 <label for="usage">Please enter your airtime usage: </label>
-                <input type="text" x-model="airtimeUsage" id="usage">
+                <input type="text" x-model="airtimeUsage" id="usage" placeholder="e.g sms,data,call">
             </div>
             <div class="input">
                 <label for="amount">Amount Available: </label>
@@ -86,8 +89,8 @@
         <div class="widget3" x-data="transportFeeWidget">
             <h2>Transport Fee</h2>
             <div class="input">
-                <label for="">Please enter your work shift here (eg. morning, afternoon, nightshift): </label>
-                <input type="text" x-model="shift" id="shift">
+                <label for="">Please enter your work shift here: </label>
+                <input type="text" x-model="shift" id="shift" placeholder="eg. morning, afternoon, nightshift">
             </div>
             
             <div class="message" x-text="message">Your shift cost will show here...
@@ -99,11 +102,18 @@
         
         </div>
     
+    </div>
+
+
+        
+
+
+    <div class=widgets>
         <div class="widget4" x-data="yearsAgoWidget">
-            <h2>YEARS AGO</h2>
+            <h2>Years Ago</h2>
             <div class="input">
-                <label for="">Please enter the year you wish here: </label>
-                <input type="number" x-model="newDate" id="newDate">
+                <label for="">Please enter year here: </label>
+                <input type="number" x-model="newDate" id="newDate" placeholder="year">
             </div>
     
             <div class="message" x-text="message">The number of years will appear here...
@@ -117,8 +127,8 @@
         <div class="widget5" x-data="totalPhoneBillWidget">
             <h2>Phone Bill</h2>
             <div class="input">
-                <label for="bill">Please enter your phone usage types here (e.g call, sms): </label>
-                <input type="text" x-model="items" id="bill" placeholder="items here">
+                <label for="bill">Please enter your phone usage types here:</label>
+                <input type="text" x-model="items" id="bill" placeholder="e.g call, sms">
             </div>
             
             <div class="bill-message" x-text="billMessage">Phone Bill will appear here...
@@ -127,6 +137,39 @@
                 <button x-on x-on:click="billDue" >Check the total phone bill</button>
             </div>
         </div>
+
+
+    
+        <div class="widget6" x-data="wordGameWidget">
+            <h2>Word Game</h2>
+
+            <div class="intext">
+                <label for="longestWord">Enter the sentence here:</label>
+                <input type="text" x-model="theSentence" id="longestWord" placeholder="within this space">
+            </div>
+            <div x-show="longestMessage.length > 0" class="message" x-text="longestMessage"></div>
+            <button class="click2" x-on:click="longW">Longest word</button>
+
+
+            <div class="intext">
+                <label for="shortestWord">Enter the sentence here:</label>
+                <input type="text" x-model="theSentence" id="longestWord">
+            </div>
+            <div class="message" x-text="shortestMessage" x-show="shortestMessage.length > 0"></div>
+            <button class="click2" x-on:click="shortW">Shortest word</button>
+
+            <div class="intext">
+                <label for="wordLengths">Enter the sentence here:</label>
+                <input type="text" x-model="theSentence" id="wordLengths">
+            </div>
+            <div class="message" x-text="sentenceCount" x-show="sentenceCount > 0"></div>
+            <button class="click" x-on:click="wordCount">Word lengths</button>
+
+        </div>
+
+    </div>   
+
+
     </div>    
 </body>
 </html>
