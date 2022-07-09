@@ -143,7 +143,7 @@
         <div class="widget6" x-data="wordGameWidget">
             <h2>Word Game</h2>
 
-            <div class="input">
+            <div class="intext">
                 <label for="longestWord">Enter the sentence here:</label>
                 <input type="text" x-model="theSentence" id="longestWord" placeholder="within this space">
             </div>
@@ -151,14 +151,14 @@
             <button class="click2" x-on:click="longW">Longest word</button>
 
 
-            <div class="input">
+            <div class="intext">
                 <label for="shortestWord">Enter the sentence here:</label>
                 <input type="text" x-model="theSentence" id="shortestWord">
             </div>
             <div class="message" x-text="shortestMessage" x-show="shortestMessage.length > 0"></div>
             <button class="click2" x-on:click="shortW">Shortest word</button>
 
-            <div class="input">
+            <div class="intext">
                 <label for="wordLengths">Enter the sentence here:</label>
                 <input type="text" x-model="theSentence" id="wordLengths">
             </div>
