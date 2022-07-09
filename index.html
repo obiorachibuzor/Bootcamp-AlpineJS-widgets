@@ -148,24 +148,26 @@
                 <input type="text" x-model="theSentence" id="longestWord" placeholder="within this space">
             </div>
             <div x-show="longestMessage.length > 0" class="message" x-text="longestMessage"></div>
-            <button x-on x-on:click="longW">Longest word</button>
+            <button class="click2" x-on:click="longW">Longest word</button>
 
 
             <div class="intext">
                 <label for="shortestWord">Enter the sentence here:</label>
-                <input type="text" x-model="theSentence" id="shortestWord">
+                <input type="text" x-model="theSentence" id="longestWord">
             </div>
             <div class="message" x-text="shortestMessage" x-show="shortestMessage.length > 0"></div>
-            <button x-on x-on:click="shortW">Shortest word</button>
+            <button class="click2" x-on:click="shortW">Shortest word</button>
 
             <div class="intext">
                 <label for="wordLengths">Enter the sentence here:</label>
                 <input type="text" x-model="theSentence" id="wordLengths">
             </div>
             <div class="message" x-text="sentenceCount" x-show="sentenceCount > 0"></div>
-            <button x-on x-on:click="wordCount">Word lengths</button>
+            <button class="click" x-on:click="wordCount">Word lengths</button>
 
         </div>
+
+       
 
     </div>   
 
